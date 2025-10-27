@@ -17,31 +17,31 @@ public class Principal_ADO3 {
         
         do {
             System.out.println("""
-                ------------- Métodos de Ordenação -------------
+                ------------- MÃ©todos de OrdenaÃ§Ã£o -------------
                 \n
-                Opções: 
-                1 - Método Bolha
-                2 - Método de Seleção
-                3 - Método de Inserção
-                4 - Todos os métodos
+                OpÃ§Ãµes: 
+                1 - MÃ©todo Bolha
+                2 - MÃ©todo de SeleÃ§Ã£o
+                3 - MÃ©todo de InserÃ§Ã£o
+                4 - Todos os mÃ©todos
                 5 - Sair do programa
                 """);
-            System.out.print("Digite o número da opção escolhida: ");
+            System.out.print("Digite o nÃºmero da opÃ§Ã£o escolhida: ");
             int op_escolhida = sc.nextInt();
 
             System.out.println("\n");
             System.out.println("""
-                               O volume de dados será:
+                               O volume de dados serÃ¡:
                                1 - Pequeno 
-                               2 - Médio
+                               2 - MÃ©dio
                                3 - Grande
                                """);
-            System.out.println("Opção escolhida: ");
+            System.out.println("OpÃ§Ã£o escolhida: ");
             int volume_dados = sc.nextInt();
             vet = gerarRandom.gerarNums(vet, volume_dados);
             
             
-            System.out.println("\n-------------- Saídas --------------\n");
+            System.out.println("\n-------------- SaÃ­das --------------\n");
 
             if (op_escolhida >= 1 && op_escolhida <= 3) {
                 metodo = selecaoDoMetodo.escolha(op_escolhida);
@@ -59,7 +59,7 @@ public class Principal_ADO3 {
                 System.out.println("""
                                    ----- Deseja continuar? -----
                                    1 - Sim 
-                                   2 - Não
+                                   2 - NÃ£o
                                    """);
                 continuar = sc.nextInt();
                 System.out.println("\n");
