@@ -63,6 +63,7 @@ public class Principal_ADO3 {
                                    """);
                 continuar = sc.nextInt();
                 System.out.println("\n");
+            
             } while (continuar == 1);
         
             System.out.println("Saindo do programa..");
@@ -80,3 +81,4 @@ public class Principal_ADO3 {
         }
     }
 }
+
