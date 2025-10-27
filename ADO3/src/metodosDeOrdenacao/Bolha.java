@@ -3,9 +3,7 @@ package metodosDeOrdenacao;
 import basesMetodosOrdenacao.OrdenacaoBase;
 
 public class Bolha extends OrdenacaoBase {
-    //private int comparacoes;
-    //int comparacoes = 0;
-    //int trocas = 0;
+    
     public void ordenacao (int[] vet){
         comparacoes = 0;
         trocas = 0;
@@ -31,3 +29,4 @@ public class Bolha extends OrdenacaoBase {
             return trocas;
         }
 }
+
