@@ -23,41 +23,51 @@ public class Principal_ADO3 {
                 1 - Método Bolha
                 2 - Método de Seleção
                 3 - Método de Inserção
-                4 - Todos os métodos
-                5 - Sair do programa
+                4 - Sair do programa
                 """);
             System.out.print("Digite o número da opção escolhida: ");
             int op_escolhida = sc.nextInt();
 
+            
+            switch(op_escolhida){
+                case 1:
+                    metodo = new Bolha();
+                    break;
+                case 2:
+                    metodo = new Insercao();
+                    break;
+                case 3:
+                    metodo = new Selecao();
+                    break;
+                default:
+                    System.out.println("Saindo do programa...");
+                    System.exit(0);
+                
+            }
+            
+                
             System.out.println("\n");
             System.out.println("""
-                               O volume de dados será:
+                               ---------------- Volume de Dados ---------------
                                1 - Pequeno 
                                2 - Médio
                                3 - Grande
                                """);
-            System.out.println("Opção escolhida: ");
-            int volume_dados = sc.nextInt();
-            vet = gerarRandom.gerarNums(vet, volume_dados);
+            System.out.println("Opção escolhida: ");  
+            int op_volume_dados = sc.nextInt();
+            vet = gerarRandom.gerarNums(vet, op_volume_dados);
             
             
-            System.out.println("\n-------------- Saídas --------------\n");
+              
+            System.out.println("\n------------------- Saídas ---------------------\n");
 
-            if (op_escolhida >= 1 && op_escolhida <= 3) {
                 metodo = selecaoDoMetodo.escolha(op_escolhida);
                 exibirSaida.saida(vet, metodo);
 
-            } else if (op_escolhida == 4) {
-                executarTodosOsMetodos(vet);
-
-            } else { 
-                System.out.println("Saindo do programa...");
-                System.exit(0);
-            }
 
             System.out.println("\n");      
                 System.out.println("""
-                                   ----- Deseja continuar? -----
+                                   +++++++------- Deseja continuar? -------+++++++
                                    1 - Sim 
                                    2 - Não
                                    """);
@@ -70,15 +80,4 @@ public class Principal_ADO3 {
     }
     
     
-
-    private static void executarTodosOsMetodos(int[] vet) {
-        OrdenacaoBase[] metodos = {new Bolha(), new Selecao(), new Insercao()};
-
-        for (OrdenacaoBase m : metodos) {
-            int[] copia = Arrays.copyOf(vet, vet.length);
-            exibirSaida.saida(copia, m);
-            System.out.println("\n--------------------------------------\n");
-        }
-    }
 }
-
