@@ -6,7 +6,7 @@ Esta foi uma atividade realizada para a matéria de Algoritmos e Programação I
 # Como rodar o projeto 💻
 - Baixe o projeto
 - Dizipe a pasta 
-- Abra o projeto no Apache NetBeans, de preferência na versão 18.1.
+- Abra o projeto no Apache NetBeans 
 - Abra a pasta "ado3" e clique na classe "Principal_ADO3"
 - Aperte em "Run File"
 
